@@ -10,6 +10,39 @@
  * governing permissions and limitations under the License.
  */
 
+/* Adding Wilson fonts */
+@font-face {
+    font-family:GT America;
+    font-style:normal;
+    font-display:swap;
+    font-weight:400;
+    src:url(/fonts/GT-America-Standard-Regular.woff2) format('woff2');
+   }
+@font-face {
+    font-family:GT America;
+    font-style:normal;
+    font-display:swap;
+    font-weight:700;
+    src:url(/fonts/GT-America-Standard-Bold.woff2) format('woff2')
+}
+@font-face {
+    font-family:GT America;
+    font-stretch:expanded;
+    font-style:normal;
+    font-display:swap;
+    font-weight:700;
+    src:url(/fonts/GT-America-Expanded-Bold.woff2) format('woff2')
+}
+@font-face {
+    font-family:GT America;
+    font-stretch:expanded;
+    font-style:normal;
+    font-display:swap;
+    font-weight:900;
+    src:url(/fonts/GT-America-Expanded-Black.woff2) format('woff2')
+}
+
+/* calculated fallback fonts */
 /* fallback font for Font Awesome 5 Brands (normal - 400) */
 @font-face {
   font-family: "font-awesome-5-brands-normal-400-fallback";
@@ -55,7 +88,7 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: GT America,'gt-america-normal-400-fallback';
+  --body-font-family:GT America,'gt-america-normal-400-fallback';
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
