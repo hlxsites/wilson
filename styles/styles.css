@@ -10,6 +10,41 @@
  * governing permissions and limitations under the License.
  */
 
+/* fallback font for Font Awesome 5 Brands (normal - 400) */
+@font-face {
+  font-family: "font-awesome-5-brands-normal-400-fallback";
+  size-adjust: 100%;
+  src: local("Arial");
+}
+
+/* fallback font for GT America (normal - 400) */
+@font-face {
+  font-family: "gt-america-normal-400-fallback";
+  size-adjust: 100%;
+  src: local("Arial");
+}
+
+/* fallback font for GT America (normal - 700) */
+@font-face {
+  font-family: "gt-america-normal-700-fallback";
+  size-adjust: 100%;
+  src: local("Arial");
+}
+
+/* fallback font for GT America (normal - 900) */
+@font-face {
+  font-family: "gt-america-normal-900-fallback";
+  size-adjust: 100%;
+  src: local("Arial");
+}
+
+/* fallback font for embeddedserviceiconfont (normal - normal) */
+@font-face {
+  font-family: "embeddedserviceiconfont-normal-normal-fallback";
+  size-adjust: 100%;
+  src: local("Arial");
+}
+
  :root {
   /* colors */
   --link-color: #035fe6;
@@ -20,7 +55,7 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+  --body-font-family: GT America,'gt-america-normal-400-fallback';
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
