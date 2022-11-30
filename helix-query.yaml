@@ -10,6 +10,8 @@ indices:
       - /padel/**
       - /sportswear/**
       - /tennis/**
+    exclude:
+      - /*
     target: /blogpost-index.json
     properties:
       title:
@@ -30,3 +32,31 @@ indices:
         select: head > meta[name="thumbnail"]
         value: |
           attribute(el, 'content')
+  category:
+    include:
+      - /category/**
+    target: /category-index.json
+    properties:
+      name:
+        select: head > meta[name="name"]
+        value: attribute(el, "content")
+      folder:
+        select: head > meta[name="folder"]
+        value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+  sport:
+    include:
+      - /*
+    target: /sport-index.json
+    properties:
+      name:
+        select: head > meta[name="name"]
+        value: attribute(el, "content")
+      folder:
+        select: head > meta[name="folder"]
+        value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
