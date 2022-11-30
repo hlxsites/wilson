@@ -35,6 +35,7 @@ indices:
   category:
     include:
       - /category/**
+    target: /category-index.json
     properties:
       name:
         select: head > meta[name="name"]
@@ -48,6 +49,7 @@ indices:
   sport:
     include:
       - /*
+    target: /sport-index.json
     properties:
       name:
         select: head > meta[name="name"]
