@@ -1,0 +1,32 @@
+version: 1
+
+indices:
+  blogposts:
+    include:
+      - /baseball/**
+      - /basketball/**
+      - /football/**
+      - /golf/**
+      - /padel/**
+      - /sportswear/**
+      - /tennis/**
+    target: /blogpost-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      sport:
+        select: head > meta[name="sport"]
+        values: |
+          match(attribute(el, "content"), '([^,]+)')
+      category:
+        select: head > meta[name="category"]
+        values: |
+          match(attribute(el, "content"), '([^,]+)')
+      thumbnail:
+        select: head > meta[name="thumbnail"]
+        value: |
+          attribute(el, 'content')
