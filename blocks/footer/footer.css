@@ -15,7 +15,7 @@ footer .footer p {
   display: flex;
 }
 
-img {
+footer .footer img {
   width: 100px;
   height: auto;
 }
@@ -24,7 +24,7 @@ footer >  p > strong > a {
   color: white;
 } 
 
-strong{
+footer .footer strong{
   border-color: #101820;
     background-color: #101820;
     color: #fff;
@@ -36,11 +36,14 @@ strong{
     margin-left: 10px;
 }
 
-strong >a:any-link {
-  color: white;
+footer > div > div > div:nth-child(2) > p > a {
+  margin:0 5px; 
+  color: grey;
 }
 
-
+footer .footer strong >a:any-link {
+  color: white;
+}
 
 footer > div  > div > div:nth-child(1) {
   padding-bottom: 3rem;
@@ -54,11 +57,6 @@ footer > div > div > div:nth-child(2) {
   color: grey;
   font-size: 1rem;
   margin-top: 25px;
-}
-
-footer > div > div > div:nth-child(2) > p > a {
-  margin:0 5px; 
-  color: grey;
 }
 
 @media (max-width: 768px) {
