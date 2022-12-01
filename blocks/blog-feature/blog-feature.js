@@ -16,8 +16,10 @@ export default async function decorate(block) {
     const blogGrid = document.createRange().createContextualFragment('<div class="blog-feature-container"></div>');
     const card = document.createRange().createContextualFragment(`
            <div class="blog-img">
+           <picture>
            <source type="image/webp" srcset="${pathname}?&format=webply&optimize=medium">
             <img SRC="${pathname}?format=png&optimize=medium" loading="lazy">
+            </picture>
            </div>
            <div class="blog-text">
                  <div class="blog-title">

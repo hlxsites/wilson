@@ -20,9 +20,10 @@ export default async function decorate(block) {
       <article class="blog-post">
         <a class="blog-teaser-link" href="${item.path}">
           <div class="blog-teaser-image">
+          <picture>
               <source type="image/webp" srcset="${pathname}?width=158&format=webply&optimize=medium">
               <img src="${pathname}?width=158&format=png&optimize=medium" alt="wilson-blog-post" loading="lazy">
-            
+              </picture>
           </div>
           <div class="blog-category">
             ${sport}
