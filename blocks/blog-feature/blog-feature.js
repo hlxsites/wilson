@@ -10,6 +10,8 @@ export default async function decorate(block) {
     const { path } = indexContent.data[0];
     const { title } = indexContent.data[0];
     const { description } = indexContent.data[0];
+    const sport = indexContent.data[0].sport.replace(/\[|\]/g, '').replace(/"/g, '');
+    const category = indexContent.data[0].category.replace(/\[|\]/g, '').replace(/"/g, '');
     // const { category } = indexContent.data[0];
     const { pathname } = new URL(image, window.location.href);
 
@@ -22,6 +24,11 @@ export default async function decorate(block) {
             </picture>
            </div>
            <div class="blog-text">
+                 <div class="blog-tag">
+                    <div class="blog-sport">${sport} </div>
+                    <span class="divider">/</span>
+                    <div class="blog-category">${category} </div>
+                 </div>
                  <div class="blog-title">
                  ${title}
                  </div>
