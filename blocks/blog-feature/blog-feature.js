@@ -1,4 +1,5 @@
 import { fetchIndex } from '../../scripts/scripts.js';
+import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default async function decorate(block) {
   const index = 'blogpost-index';
@@ -41,5 +42,6 @@ export default async function decorate(block) {
 
     blogGrid.firstChild.appendChild(card);
     block.appendChild(blogGrid);
+    block.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, true, [{ width: '1050' }])));
   }
 }
