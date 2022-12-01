@@ -1,5 +1,5 @@
 import { fetchIndex } from '../../scripts/scripts.js';
-import { readBlockConfig } from '../../scripts/lib-franklin.js';
+import { readBlockConfig, createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default async function decorate(block) {
   const cfg = readBlockConfig(block);
@@ -45,4 +45,5 @@ export default async function decorate(block) {
   });
 
   block.appendChild(blogGrid);
+  block.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
 }
