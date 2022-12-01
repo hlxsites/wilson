@@ -12,11 +12,12 @@ export default async function decorate(block) {
 
   const blogGrid = document.createRange().createContextualFragment('<div class="blog-grid"></div>');
 
-  indexContent.data.forEach((item) => {
-    const { pathname } = new URL(item.thumbnail, window.location.href);
-    const sport = item.sport.replace(/\[|\]/g, '').replace(/"/g, '');
-    const desc = `${item.description.substring(0, 90)}...`;
-    const card = document.createRange().createContextualFragment(`<div class="grid-item">
+  indexContent.data.forEach((item, key) => {
+    if (key > 0) {
+      const { pathname } = new URL(item.thumbnail, window.location.href);
+      const sport = item.sport.replace(/\[|\]/g, '').replace(/"/g, '');
+      const desc = `${item.description.substring(0, 90)}...`;
+      const card = document.createRange().createContextualFragment(`<div class="grid-item">
       <article class="blog-post">
         <a class="blog-teaser-link" href="${item.path}">
           <div class="blog-teaser-image">
@@ -39,7 +40,8 @@ export default async function decorate(block) {
         </article>
       </div>`);
 
-    blogGrid.firstChild.appendChild(card);
+      blogGrid.firstChild.appendChild(card);
+    }
   });
 
   block.appendChild(blogGrid);
