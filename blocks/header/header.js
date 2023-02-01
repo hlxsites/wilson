@@ -65,5 +65,11 @@ export default async function decorate(block) {
     const navParent = nav.parentNode;
     const headerTop = [...nav.children][1];
     navParent.insertBefore(headerTop, nav);
+
+    const link = document.createElement('a');
+    link.href = '/';
+    const navBrand = block.querySelector('.nav-brand');
+    link.append(navBrand.querySelector('picture'));
+    navBrand.append(link);
   }
 }
