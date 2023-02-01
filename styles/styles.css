@@ -235,3 +235,16 @@ main .section[data-section-status='initialized'] {
 main .section.highlight {
   background-color: var(--highlight-background-color);
 }
+
+/* Sport and category page template */
+.category .default-content-wrapper,
+.sport .default-content-wrapper {
+  text-align: center;
+  font-size: 16px;
+}
+
+.category .default-content-wrapper h1,
+.sport .default-content-wrapper h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
