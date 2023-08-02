@@ -61,7 +61,7 @@ export default async function decorate(block) {
       <div class="blog-img">
         <picture>
           <source type="image/webp" srcset="${imageSrc}?width=1050&format=webply&optimize=medium">
-          <img src="${imageSrc}?width=1050&format=png&optimize=medium">
+          <img src="" width="1050" height="454" loading="eager">
         </picture>
       </div>
       <div class="blog-text">
@@ -87,7 +87,7 @@ export default async function decorate(block) {
           <div class="blog-teaser-image">
             <picture>
               <source type="image/webp" srcset="${thumbnailSrc}?width=344&format=webply&optimize=medium">
-              <img src="${thumbnailSrc}?width=344&format=png&optimize=medium" alt="wilson-blog-post" loading="lazy">
+              <img src="${thumbnailSrc}?width=344&format=png&optimize=medium" width="344" alt="wilson-blog-post" loading="lazy">
             </picture>
           </div>
           <div class="blog-category">${firstSport}</div>
